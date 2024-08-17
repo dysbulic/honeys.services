@@ -16,6 +16,7 @@
 h1, h2, h3 {
   text-align: center;
   margin: 0;
+  padding: 0;
 }
 
 h1 span {
@@ -24,15 +25,44 @@ h1 span {
 
 #spot-on {
   font-family: 'Great Vibes', sans-serif;
-  font-size: 15vw;;
+  font-size: 8vw;
+  margin-top: 5vh;
 }
 
 #honey-bees {
   font-family: 'Playwrite CU';
-  font-size: 9vw;
+  font-size: 4vw;
+  margin-top: -5rem;
 }
 
 h2 {
   font-family: sans-serif;
-  font-size: 6vw;
+  font-size: 3vw;
+}
+
+#splash {
+  max-width: 150ch;
+  display: block;
+  margin-inline: auto;
+  margin-top: 5vh;
+}
+
+@media screen and (width < 1000px) {
+  #spot-on {
+    font-size: 25vw;
+  }
+
+  #honey-bees {
+    font-size: 12vw;
+    margin-top: -1em;
+  }
+
+  h2 {
+    font-size: 9vw;
+  }
+
+  #splash {
+    max-width: 100ch;
+  }
+  
 }
