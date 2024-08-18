@@ -8,10 +8,20 @@
 @font-face {
   font-family: 'Playwrite CU';
   src: url('PlaywriteCU-VariableFont_wght.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 900;
 }
 
+html {
+  background-image: url('bubbles.svg');
+  background-size: cover;
+}
+
+body {
+  min-height: 50vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
 h1, h2, h3 {
   text-align: center;
@@ -19,11 +29,12 @@ h1, h2, h3 {
   padding: 0;
 }
 
-h1 span {
+h1 span, #services {
   display: block;
 
-  background: radial-gradient(ellipse farthest-corner at 35% 90%, #F47715, #F25E19, #F79A0F, #FBC701);
-  background-size: calc(8vw * 4);
+  background: radial-gradient(ellipse farthest-corner at 35% 90%, #F47715, #F25E19, #F79A0F, #FBC701, #F47715);
+  background-size: calc(8vw * 6.5);
+  background-position: calc(50% - 1em);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px #3334;
@@ -48,15 +59,19 @@ h2 {
 
 #services {
   margin-top: -0.5em;
-  color: #0054C7;
-  -webkit-text-stroke: 2px #3334;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #splash {
   max-width: 150ch;
   display: block;
-  margin-inline: auto;
-  margin-top: 5vh;
 }
 
 a {
@@ -64,6 +79,7 @@ a {
   color: #C77500;
   text-decoration: none;
   margin-top: 1em;
+  -webkit-text-stroke: 3px #FBC701;
 }
 
 a:hover {
@@ -72,6 +88,10 @@ a:hover {
 }
 
 @media screen and (width < 1000px) {
+  body {
+    height: 100svh;
+  }
+
   #spot-on {
     font-size: 25vw;
   }
@@ -81,11 +101,16 @@ a:hover {
     margin-top: -1em;
   }
 
+  #splash {
+    width: 100%;
+  }
+
   h2 {
     font-size: 9vw;
   }
 
-  #splash {
-    max-width: 100ch;
+  a {
+    font-size: 8vw;
+    -webkit-text-stroke: 0.5px #FBC701;
   }
 }
