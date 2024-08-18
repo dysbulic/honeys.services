@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  min-height: 50vw;
+  min-height: max(50vw, 100svh);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -88,10 +88,6 @@ a:hover {
 }
 
 @media screen and (width < 1000px) {
-  body {
-    height: 100svh;
-  }
-
   #spot-on {
     font-size: 25vw;
   }
